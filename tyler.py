@@ -1,13 +1,13 @@
 from PIL import Image, ImageChops, ImageFilter, ImageDraw
-size = 512
+size = 2048
 im = Image.new("RGB", (size,size),0)
-rows = 4
-cols = 4
-xsize = int(im.size[0])/rows
-ysize = int(im.size[1])/cols
+rows = 12
+cols = 12
+xsize = int(im.size[0]/rows)
+ysize = int(im.size[1]/cols)
 xsizex = int(xsize)
 offset = 0
-versatz = False
+versatz = True
 
 
 draw = ImageDraw.Draw(im)
@@ -24,7 +24,7 @@ def tyler(offset):
         if x == int(rows+2):
             if versatz == True:
                 if offset == 0:
-                    offset = xsize/2
+                    offset = int(xsize/2)
                 elif offset == int(xsize/2):
                     offset = 0
 
