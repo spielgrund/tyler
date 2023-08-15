@@ -1,7 +1,7 @@
 from PIL import Image, ImageChops, ImageFilter, ImageDraw
 size = 2048
 im = Image.new("RGB", (size,size),0)
-rows = 12
+rows = 10
 cols = 12
 xsize = int(im.size[0]/rows)
 ysize = int(im.size[1]/cols)
